@@ -462,10 +462,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 27
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 54
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -499,7 +499,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 25, y: 40}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &758056571 stripped
 GameObject:
@@ -775,7 +775,7 @@ PrefabInstance:
     - target: {fileID: 560414420328789983, guid: 187116a236813d943978cc1b9b8fb02f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.96
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 560414420328789983, guid: 187116a236813d943978cc1b9b8fb02f,
         type: 3}
@@ -858,7 +858,7 @@ PrefabInstance:
     - target: {fileID: 560414420328789983, guid: 213e1d197cf11eb4db00066dc3d9210a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.96
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 560414420328789983, guid: 213e1d197cf11eb4db00066dc3d9210a,
         type: 3}
@@ -1306,11 +1306,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishLine_1
       objectReference: {fileID: 0}
-    - target: {fileID: 325602627844265149, guid: 154bad4204a74224f8a6aa631c8e42d7,
-        type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 1402918143}
     - target: {fileID: 325602627844265150, guid: 154bad4204a74224f8a6aa631c8e42d7,
         type: 3}
       propertyPath: m_LocalPosition.x
