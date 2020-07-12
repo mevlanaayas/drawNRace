@@ -14,7 +14,7 @@ namespace DrawRace
         {
             yield return new WaitForFixedUpdate();
             var mesh = new Mesh();
-            GetComponent<LineRenderer>().BakeMesh(mesh, true);
+            GetComponent<LineRenderer>().BakeMesh(mesh);
             GetComponent<MeshCollider>().sharedMesh = mesh;
         }
     }

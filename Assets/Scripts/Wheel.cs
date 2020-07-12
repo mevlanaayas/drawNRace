@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -41,7 +40,6 @@ namespace DrawRace
             _line.transform.localPosition = Vector3.zero;
             _lineRenderer = _line.GetComponent<LineRenderer>();
             _meshCollider = _line.GetComponent<MeshCollider>();
-            _meshCollider.convex = true;
         }
 
         public void Update()
@@ -75,7 +73,7 @@ namespace DrawRace
             fingerPositions.Clear();
             _lineRenderer.positionCount = 0;
         }
-        
+
         private void ClearPreview()
         {
             _lineRendererPreview.positionCount = 0;
@@ -99,7 +97,7 @@ namespace DrawRace
             _linePreview.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             _lineRendererPreview = _linePreview.GetComponent<LineRenderer>();
         }
-        
+
         private void UpdateLineRendererPositionList()
         {
             var newPositionList = new LinkedList<Vector3>();
@@ -111,7 +109,7 @@ namespace DrawRace
             });
             fingerPositions.ForEach(fingerPosition =>
                 newPositionList.AddFirst(Vector2.Scale(fingerPosition, ReverseScaleVector)));
-            
+
             FinalizeLine(newPositionList);
             FinalizeLinePreview(previewPositions);
         }
@@ -130,11 +128,11 @@ namespace DrawRace
             _lineRendererPreview.positionCount = previewPositionList.Count;
             _lineRendererPreview.SetPositions(previewPositionList.ToArray());
         }
-        
+
         private void DrawMesh()
         {
             var mesh = new Mesh();
-            _lineRenderer.BakeMesh(mesh, true);
+            _lineRenderer.BakeMesh(mesh);
             _meshCollider.sharedMesh = mesh;
         }
 
