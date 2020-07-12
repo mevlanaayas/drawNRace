@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace DrawRace
 {
@@ -6,9 +7,15 @@ namespace DrawRace
     {
         private void Start()
         {
-            // var mesh = new Mesh();
-            // GetComponent<LineRenderer>().BakeMesh(mesh, true);
-            // GetComponent<MeshCollider>().sharedMesh = mesh;
+            StartCoroutine(nameof(WaitAndSetupMesh));
+        }
+
+        private IEnumerator WaitAndSetupMesh()
+        {
+            yield return new WaitForFixedUpdate();
+            var mesh = new Mesh();
+            GetComponent<LineRenderer>().BakeMesh(mesh, true);
+            GetComponent<MeshCollider>().sharedMesh = mesh;
         }
     }
 }
