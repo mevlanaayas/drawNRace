@@ -4,7 +4,6 @@ namespace DrawRace
 {
     public class FinishLine : MonoBehaviour
     {
-        
         private Game _game;
 
         private void Start()

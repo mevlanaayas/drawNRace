@@ -4,7 +4,6 @@ namespace DrawRace
 {
     public class FollowerCamera : MonoBehaviour
     {
-        
         public GameObject target;
 
         public float smoothSpeed = 0.125f;
@@ -14,7 +13,8 @@ namespace DrawRace
         {
             offset = transform.position;
         }
-        public void FixedUpdate ()
+
+        public void FixedUpdate()
         {
             var desiredPosition = target.transform.position + offset;
             var smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);

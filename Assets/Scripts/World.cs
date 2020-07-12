@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace DrawRace
@@ -8,7 +7,6 @@ namespace DrawRace
     {
 
         public Text raceStatus;
-        public Text minimap;
 
         private HumanRacer _humanRacer;
         private AiRacer _aiRacer;

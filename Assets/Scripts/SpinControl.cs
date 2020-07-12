@@ -17,7 +17,7 @@ namespace DrawRace
             {
                 Debug.LogError("No visual found for wheel.");
             }
-            
+
             if (wheel.transform.childCount == 0)
             {
                 Debug.LogError("No visual found for wheel.");
