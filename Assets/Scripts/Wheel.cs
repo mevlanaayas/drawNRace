@@ -11,7 +11,7 @@ namespace DrawRace
         public List<Vector2> fingerPositions;
         public int positionLimit = 25;
 
-        private GameObject _line;
+        public GameObject line;
         private LineRenderer _lineRenderer;
         private MeshCollider _meshCollider;
         private Camera _camera;
@@ -36,10 +36,9 @@ namespace DrawRace
                 Debug.LogError("No main camera.");
             }
 
-            _line = Instantiate(linePrefab, Vector3.zero, Quaternion.identity, transform);
-            _line.transform.localPosition = Vector3.zero;
-            _lineRenderer = _line.GetComponent<LineRenderer>();
-            _meshCollider = _line.GetComponent<MeshCollider>();
+            line.transform.localPosition = Vector3.zero;
+            _lineRenderer = line.GetComponent<LineRenderer>();
+            _meshCollider = line.GetComponent<MeshCollider>();
         }
 
         public void Update()
